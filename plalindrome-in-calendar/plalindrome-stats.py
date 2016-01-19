@@ -43,8 +43,8 @@ while cur <= endday:
     
     cur += datetime.timedelta(1)
 
-print 'There are total {0:d} days from {1:%Y-%m-%d} to {2:%Y-%m-%d}'.format(len(plalindromes), startday, endday)
-print 'But there are only {:d} plalindromes among them.'
+print 'There are total {0:d} days from {1:%Y-%m-%d} to {2:%Y-%m-%d}'.format(total, startday, endday)
+print 'But there are only {0:d} plalindromes among them.'.format(len(plalindromes))
 print '-'*75
 print '{0:>20s} {1:>20s} {2:>20s}'.format('Solar Date', 'Lunar Date', 'Plalindromes')
 for member in plalindromes:
