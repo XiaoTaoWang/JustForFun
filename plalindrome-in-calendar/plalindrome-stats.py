@@ -50,9 +50,8 @@ print '{0:>20s} {1:>20s} {2:>20s}'.format('Solar Date', 'Lunar Date', 'Plalindro
 for member in plalindromes:
     solar = '{0:04d}-{1:02d}-{2:02d}'.format(member[0].year, member[0].month, member[0].day)
     lunar = '{0:04d}-{1:02d}-{2:02d}'.format(member[1].year, member[1].month, member[1].day)
-    print '{0:>20s} {1:>20s} {2:>20s}'.format(solar, lunar, ' <-> '.join(member[2:]))
-
-
-
-
-
+    if member[0] == datetime.date(1994, 1, 21):
+        print '{0:>20s} {1:>20s} {2:>20s}*'.format(solar, lunar, ' <-> '.join(member[2:]))
+    else:
+        print '{0:>20s} {1:>20s} {2:>20s}'.format(solar, lunar, ' <-> '.join(member[2:]))
+        
