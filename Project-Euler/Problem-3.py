@@ -17,15 +17,15 @@ import math
 
 def maxprimefactor(num):
     
-    maxiter = math.sqrt(num)
+    maxiter = int(math.sqrt(num))
     largest = 0
-    for i in xrange(2, int(maxiter)):
+    for i in xrange(2, maxiter + 1):
         if num % i == 0:
             f1 = i
             f2 = num / i
             for f in [f1, f2]:
                 prime = 1 # 0 -- is prime
-                for p in xrange(2, int(math.sqrt(f))):
+                for p in xrange(2, int(math.sqrt(f)) + 1):
                     if f % p == 0:
                         prime = 0
                         break
