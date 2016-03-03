@@ -6,7 +6,7 @@ Created on Wed Mar 02 21:12:58 2016
 """
 
 """
-Problem 3:
+Problem 6:
 
 The sum of the squares of the first ten natural numbers is,
 
