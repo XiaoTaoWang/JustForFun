@@ -57,8 +57,21 @@ def bruteforce(coin):
     return count
 
 # The second one uses dynamic programming. It's much more elegant
+def dynamic(coin):
+    
+    total = currency[coin]
+    
+    pieces = sorted(reverse)
+    counts = [0 for i in range(total+1)]
+    counts[0] = 1
+    for p in pieces:
+        for med in range(p, total+1):
+            counts[med] += counts[med-p]
+    
+    return counts[-1]
 
 
 if __name__ == '__main__':
-    print bruteforce(u'50p')
+    print bruteforce(u'£2')
+    print dynamic(u'£2')
             
