@@ -38,4 +38,3 @@ for num in xrange(2, 355000):
         pool.append(num)
 
 print sum(pool)
-        
